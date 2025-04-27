@@ -241,7 +241,7 @@ systemData.forEach(item => {
   const description = checkDescription(item.description); // "Takılı Değil" durumu ve parantez içi kontrolü
 
   // Eğer img alanı boşsa, https://i.hizliresim.com/1i2vije.png linkini ekle
-  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/1i2vije.png";
+  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/7ttnp7e.png";
 
   systemTable.innerHTML += `
     <tr>
@@ -261,7 +261,7 @@ equipmentData.forEach(item => {
   const description = checkDescription(item.description); // "Takılı Değil" durumu ve parantez içi kontrolü
 
   // Eğer img alanı boşsa, https://i.hizliresim.com/1i2vije.png linkini ekle
-  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/1i2vije.png";
+  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/7ttnp7e.png";
 
   equipmentTable.innerHTML += `
     <tr>
