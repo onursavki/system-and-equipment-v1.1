@@ -246,7 +246,7 @@ systemData.forEach(item => {
   systemTable.innerHTML += `
     <tr>
       <td>
-        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/7ttnp7e.png' ? 'opacity: 0.1;' : ''}">
+        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/7ttnp7e.png' ? 'opacity: 0.3;' : ''}">
       </td>
       <td><b>${item.title}${label}</b></td>
       <td>${description}</td>
@@ -266,7 +266,7 @@ equipmentData.forEach(item => {
   equipmentTable.innerHTML += `
     <tr>
       <td>
-        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/7ttnp7e.png' ? 'opacity: 0.1;' : ''}">
+        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/7ttnp7e.png' ? 'opacity: 0.3;' : ''}">
       </td>
       <td><b>${item.title}${label}</b></td>
       <td>${description}</td>
