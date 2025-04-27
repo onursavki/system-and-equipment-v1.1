@@ -241,12 +241,12 @@ systemData.forEach(item => {
   const description = checkDescription(item.description); // "Takılı Değil" durumu ve parantez içi kontrolü
 
   // Eğer img alanı boşsa, https://i.hizliresim.com/1i2vije.png linkini ekle
-  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/7ttnp7e.png";
+  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/go41is7.png";
 
   systemTable.innerHTML += `
     <tr>
       <td>
-        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/7ttnp7e.png' ? 'opacity: 0.2;' : ''}">
+        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/go41is7.png' ? 'opacity: 0.2;' : ''}">
       </td>
       <td><b>${item.title}${label}</b></td>
       <td>${description}</td>
@@ -261,12 +261,12 @@ equipmentData.forEach(item => {
   const description = checkDescription(item.description); // "Takılı Değil" durumu ve parantez içi kontrolü
 
   // Eğer img alanı boşsa, https://i.hizliresim.com/1i2vije.png linkini ekle
-  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/7ttnp7e.png";
+  const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/go41is7.png";
 
   equipmentTable.innerHTML += `
     <tr>
       <td>
-        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/7ttnp7e.png' ? 'opacity: 0.2;' : ''}">
+        <img src="${imgSrc}" alt="Logo" style="max-width: 50px; ${imgSrc === 'https://i.hizliresim.com/go41is7.png' ? 'opacity: 0.2;' : ''}">
       </td>
       <td><b>${item.title}${label}</b></td>
       <td>${description}</td>
