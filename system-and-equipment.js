@@ -45,7 +45,7 @@ const systemData = [
   {
     img: "",
     title: "2.5\" SSD/HDD",
-    description: "Takılı Değil",
+    description: "",
     dateAdded: "021-07-24"
   },
   {
@@ -223,7 +223,7 @@ function getLabel(dateAdded) {
 function checkDescription(description) {
   // "Takılı Değil" durumunu kontrol et
   if (description.includes("Takılı Değil")) {
-    return `<span style="color: #ff3547;">⛔ ${description}</span>`;
+    return `<span style="color: #ff3547;">⛔ Takılı Değil ${description}</span>`;
   }
 
   // Eğer parantez içindeki metni italik yap
