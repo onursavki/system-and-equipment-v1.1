@@ -205,30 +205,29 @@ function getLabel(dateAdded) {
   const diffTime = today - addedDate;
   const diffDays = diffTime / (1000 * 3600 * 24); // Farkı gün cinsinden hesapla
 
-  // Eğer tarih gelecekteki bir tarihse, "YAKINDA" etiketi ekle
   if (addedDate > today) {
     return " <span class='soon'>YAKINDA</span>";
   }
 
-  // Eğer tarih bugünden itibaren 15 gün içinde eklenmişse, "YENİ" etiketi ekle
   if (diffDays <= 15) {
     return " <span class='new'>YENİ</span>";
   }
 
-  // Eğer tarih geçmişse, hiçbir etiket ekleme
   return "";
 }
 
-// "Takılı Değil" durumunu kontrol et ve stil uygula
+// Description boşsa veya özel durum varsa işleme
 function checkDescription(description) {
-  // "Takılı Değil" durumunu kontrol et
-  if (description.includes("Takılı Değil")) {
-    return `<span style="color: #ff3547;">⛔ Takılı Değil ${description}</span>`;
+  if (!description || description.trim() === "") {
+    return `<span style="color: #ff3547;">⛔ Takılı Değil</span>`;
   }
 
-  // Eğer parantez içindeki metni italik yap
+  if (description.includes("Takılı Değil")) {
+    return `<span style="color: #ff3547;">⛔ ${description}</span>`;
+  }
+
   description = description.replace(/\((.*?)\)/g, (match, p1) => {
-    return `(<i>${p1}</i>)`; // Parantez içindekini italik yap
+    return `(<i>${p1}</i>)`;
   });
 
   return description;
@@ -237,10 +236,8 @@ function checkDescription(description) {
 // Sistemi Yükleme
 const systemTable = document.getElementById("systemTableBody");
 systemData.forEach(item => {
-  const label = getLabel(item.dateAdded); // "YAKINDA" veya "YENİ" etiketini kontrol et
-  const description = checkDescription(item.description); // "Takılı Değil" durumu ve parantez içi kontrolü
-
-  // Eğer img alanı boşsa, https://i.hizliresim.com/1i2vije.png linkini ekle
+  const label = getLabel(item.dateAdded);
+  const description = checkDescription(item.description);
   const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/go41is7.png";
 
   systemTable.innerHTML += `
@@ -257,10 +254,8 @@ systemData.forEach(item => {
 // Ekipmanı Yükleme
 const equipmentTable = document.getElementById("equipmentTableBody");
 equipmentData.forEach(item => {
-  const label = getLabel(item.dateAdded); // "YAKINDA" veya "YENİ" etiketini kontrol et
-  const description = checkDescription(item.description); // "Takılı Değil" durumu ve parantez içi kontrolü
-
-  // Eğer img alanı boşsa, https://i.hizliresim.com/1i2vije.png linkini ekle
+  const label = getLabel(item.dateAdded);
+  const description = checkDescription(item.description);
   const imgSrc = item.img && item.img.trim() !== "" ? item.img : "https://i.hizliresim.com/go41is7.png";
 
   equipmentTable.innerHTML += `
@@ -273,11 +268,9 @@ equipmentData.forEach(item => {
     </tr>
   `;
 });
-  
+
 // Tablodaki tüm <th> etiketlerine erişiyoruz
 const thElements = document.querySelectorAll('th');
-
-// Her bir <th> etiketinin rengini #007bff olarak ayarlıyoruz
 thElements.forEach(th => {
   th.style.color = '#007bff';
 });
