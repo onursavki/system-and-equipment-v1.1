@@ -179,7 +179,7 @@ const equipmentData = [
     dateAdded: "2024-01-10"
   },
   {
-    img: "",
+    img: "https://i.hizliresim.com/kdij191.png",
     title: "Tp-Link UH720",
     description: "2 Şarj Portlu + USB 3.0 7-Portlu Hub",
     dateAdded: "2020-09-10"
