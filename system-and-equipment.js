@@ -37,7 +37,7 @@ const systemData = [
     dateAdded: "021-07-24"
   },
   {
-    img: "",
+    img: "https://i.hizliresim.com/sx1spen.png",
     title: "2.Port M2 SSD PCIe Gen3x4",
     description: "512GB SAMSUNG PM9A1 M.2 SSD PCIe 4.0 x4 (Okuma: 6900 MB/s - Yazma: 5000 MB/s)",
     dateAdded: "021-07-24"
