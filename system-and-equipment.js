@@ -212,7 +212,7 @@ function getLabel(dateAdded) {
 
   // Eğer tarih bugünden itibaren 15 gün içinde eklenmişse, "YENİ" etiketi ekle
   if (diffDays <= 15) {
-    return " <span class='new-equipment'>YENİ</span>";
+    return " <span class='new'>YENİ</span>";
   }
 
   // Eğer tarih geçmişse, hiçbir etiket ekleme
