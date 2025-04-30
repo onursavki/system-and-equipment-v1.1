@@ -219,11 +219,11 @@ function getLabel(dateAdded) {
 // Description boşsa veya özel durum varsa işleme
 function checkDescription(description) {
   if (!description || description.trim() === "") {
-    return `<span style="color: #ff3547;"><span data-uk-icon="icon: ban"></span> Takılı Değil</span>`;
+    return `<span style="color: #ff3547;"><span style="position: relative; top: -2px;" data-uk-icon="icon: ban"></span> Takılı Değil</span>`;
   }
 
   if (description.includes("Takılı Değil")) {
-    return `<span style="color: #ff3547;"><span data-uk-icon="icon: ban"></span> ${description}</span>`;
+    return `<span style="color: #ff3547;"><span style="position: relative; top: -2px;" data-uk-icon="icon: ban"></span> ${description}</span>`;
   }
 
   description = description.replace(/\((.*?)\)/g, (match, p1) => {
