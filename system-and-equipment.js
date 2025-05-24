@@ -13,7 +13,7 @@ const systemData = [
     dateAdded: "021-07-24"
   },
   {
-    img: "https://i.hizliresim.com/7aza0zz.png",
+    img: "https://i.hizliresim.com/bqc494h.jpg",
     title: "Ekran Kartı",
     description: "nVIDIA® GeForce® RTX3060 Max-Performance 6GB GDDR6 192-Bit DX12 (En Yüksek Grafik Gücü; 90Watt + 15 Watt DB 2.0)",
     dateAdded: "021-07-24"
